@@ -1,1 +1,0 @@
-// src/assets/Components/PopularProperty.jsx
