@@ -3,7 +3,7 @@
       {
         "id": 1,
         "name": "Cozy Apartment in Downtown",
-        "image": "Images/Cozy Apartment in Downtown.png",
+        "image": "src/assets/images/Cozy Apartment in Downtown.png",
         "price": 12000,
         "reviews": 4.5,
         "bedrooms": 2,
@@ -17,7 +17,7 @@
       {
         "id": 2,
         "name": "Luxurious Villa with a View",
-        "image": "Images/Luxurious Villa with a View.png",
+        "image": "src/assets/images/Luxurious Villa with a View.png",
         "price": 5000000,
         "reviews": 5,
         "bedrooms": 5,
@@ -31,7 +31,7 @@
       {
         "id": 3,
         "name": "Charming Cottage for a Relaxing Getaway",
-        "image": "Images/Charming Cottage for a Relaxing Getaway.png",
+        "image": "src/assets/images/Charming Cottage for a Relaxing Getaway.png",
         "price": 1500,
         "reviews": 4,
         "bedrooms": 1,
@@ -45,7 +45,7 @@
       {
         "id": 4,
         "name": "Modern Loft in the City",
-        "image": "Images/Modern Loft in the City.png",
+        "image": "src/assets/images/Modern Loft in the City.png",
         "price": 18000,
         "reviews": 4.2,
         "bedrooms": 1,
@@ -59,7 +59,7 @@
       {
         "id": 5,
         "name": "Seaside Cottage with Ocean Views",
-        "image": "Images/Seaside Cottage with Ocean Views.png",
+        "image": "src/assets/images/Seaside Cottage with Ocean Views.png",
         "price": 3000,
         "reviews": 4.7,
         "bedrooms": 2,
@@ -73,7 +73,7 @@
       {
         "id": 6,
         "name": "Elegant Townhouse in Historic District",
-        "image": "Images/Elegant Townhouse in Historic District.png",
+        "image": "src/assets/images/Elegant Townhouse in Historic District.png",
         "price": 4500000,
         "reviews": 4.9,
         "bedrooms": 4,
@@ -87,7 +87,7 @@
       {
         "id": 7,
         "name": "Modern City Apartment with Balcony",
-        "image": "Images/Modern City Apartment with Balcony.png",
+        "image": "src/assets/images/Modern City Apartment with Balcony.png",
         "price": 150000,
         "reviews": 4.3,
         "bedrooms": 2,
@@ -101,7 +101,7 @@
       {
         "id": 8,
         "name": "Rustic Cabin Retreat",
-        "image": "Images/Rustic Cabin Retreat.png",
+        "image": "src/assets/images/Rustic Cabin Retreat.png",
         "price": 2500,
         "reviews": 4.8,
         "bedrooms": 1,
@@ -115,7 +115,7 @@
       {
         "id": 9,
         "name": "Spacious Family Home",
-        "image": "Images/Spacious Family Home.png",
+        "image": "src/assets/images/Spacious Family Home.png",
         "price": 3500000,
         "reviews": 4.6,
         "bedrooms": 3,
@@ -129,7 +129,7 @@
       {
         "id": 10,
         "name": "Urban Studio Apartment",
-        "image": "Images/Urban Studio Apartment.png",
+        "image": "src/assets/images/Urban Studio Apartment.png",
         "price": 90000,
         "reviews": 4.1,
         "bedrooms": 1,
@@ -143,7 +143,7 @@
       {
         "id": 11,
         "name": "Mountain Chalet with Scenic Views",
-        "image": "Images/Mountain Chalet with Scenic Views.png",
+        "image": "src/assets/images/Mountain Chalet with Scenic Views.png",
         "price": 4000,
         "reviews": 4.5,
         "bedrooms": 2,
@@ -157,7 +157,7 @@
       {
         "id": 12,
         "name": "Coastal Retreat with Beach Access",
-        "image": "Images/Coastal Retreat with Beach Access.png",
+        "image": "src/assets/images/Coastal Retreat with Beach Access.png",
         "price": 5500,
         "reviews": 4.9,
         "bedrooms": 1,
@@ -171,7 +171,7 @@
       {
         "id": 13,
         "name": "Historic Mansion",
-        "image": "Images/Historic Mansion.png",
+        "image": "src/assets/images/Historic Mansion.png",
         "price": 8000000,
         "reviews": 5,
         "bedrooms": 6,
@@ -185,7 +185,7 @@
       {
         "id": 14,
         "name": "Modern City Loft",
-        "image": "Images/Modern City Loft.png",
+        "image": "src/assets/images/Modern City Loft.png",
         "price": 22000,
         "reviews": 4.7,
         "bedrooms": 2,
@@ -199,7 +199,7 @@
       {
         "id": 15,
         "name": "Riverside Retreat",
-        "image": "Images/Riverside Retreat.png",
+        "image": "src/assets/images/Riverside Retreat.png",
         "price": 30000,
         "reviews": 4.6,
         "bedrooms": 1,
@@ -213,7 +213,7 @@
       {
         "id": 16,
         "name": "Elegant Beach House",
-        "image": "Images/Elegant Beach House.png",
+        "image": "src/assets/images/Elegant Beach House.png",
         "price": 7000000,
         "reviews": 4.8,
         "bedrooms": 4,
@@ -227,7 +227,7 @@
       {
         "id": 17,
         "name": "Mountain Retreat with Hot Tub",
-        "image": "Images/Mountain Retreat with Hot Tub.png",
+        "image": "src/assets/images/Mountain Retreat with Hot Tub.png",
         "price": 35000,
         "reviews": 4.4,
         "bedrooms": 1,
@@ -241,7 +241,7 @@
       {
         "id": 18,
         "name": "Scenic Lakefront Cabin",
-        "image": "Images/Scenic Lakefront Cabin.png",
+        "image": "src/assets/images/Scenic Lakefront Cabin.png",
         "price": 40000,
         "reviews": 4.5,
         "bedrooms": 2,
@@ -255,7 +255,7 @@
       {
         "id": 19,
         "name": "Historic Townhouse",
-        "image": "Images/Historic Townhouse.png",
+        "image": "src/assets/images/Historic Townhouse.png",
         "price": 6500000,
         "reviews": 4.9,
         "bedrooms": 3,
@@ -269,7 +269,7 @@
       {
         "id": 20,
         "name": "Ski Chalet with Fireplace",
-        "image": "Images/Ski Chalet with Fireplace.png",
+        "image": "src/assets/images/Ski Chalet with Fireplace.png",
         "price": 50000,
         "reviews": 4.7,
         "bedrooms": 2,
