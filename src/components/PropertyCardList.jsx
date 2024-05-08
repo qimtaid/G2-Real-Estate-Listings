@@ -30,6 +30,7 @@ function PropertyCardList() {
                 />
             ))}
         </ul>
+        
     );
 }
 
