@@ -1,6 +1,6 @@
 import React from "react";
-import CardForm from './Components/CardForm.jsx'; // Import the CardForm component
-import PropertyCardList from './Components/PropertyCardList.jsx';
+import CardForm from './components/CardForm.jsx'; // Import the CardForm component
+import PropertyCardList from './components/PropertyCardList.jsx';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
 
 export default App;
 import CardForm from './components/CardForm.jsx'; // Import the CardForm component
-import PropertyCardList from './Components/PropertyCardList.jsx';
+import PropertyCardList from './components/PropertyCardList.jsx';
 
 function App() {
   return (
