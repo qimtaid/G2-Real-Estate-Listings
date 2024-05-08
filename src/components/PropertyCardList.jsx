@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import PropertyCard from './PropertyCard.jsx'; 
+import PropertyCard from '../components/PropertyCard'; 
 
 function PropertyCardList() {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/properties")
+        fetch(`http://localhost:3000/properties`)
             .then(res => res.json())
-            .then(data => setProperties(data.properties))
+            .then(properties => setProperties(properties))
             .catch(error => console.log("Error fetching properties:", error));
     }, []);
 
