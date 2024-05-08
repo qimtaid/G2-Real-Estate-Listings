@@ -1,93 +1,118 @@
-import { useState } from 'react';
+import  { useState } from 'react';
+import PropertyCard from './PropertyCard';
 
-function CardForm() {
-  const [property, setProperty] = useState({
-    title: '',
-    description: '',
-    price: '',
-    location: '',
-    type: '',
-  });
+function PropertyCardForm() {
+  const [properties, setProperties] = useState([]);
+  const [showForm, setShowForm] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProperty((prevProperty) => ({
-      ...prevProperty,
-      [name]: value,
-    }));
+  const addProperty = (newProperty) => {
+    setProperties([...properties, newProperty]);
+    setShowForm(false); // Hide the form after adding the property
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can send the property data to your backend or perform any other action
-    console.log('Submitted Property:', property);
-    // Reset form fields after submission
-    setProperty({
-      title: '',
-      description: '',
-      price: '',
-      location: '',
-      type: '',
-    });
+  const deleteProperty = (index) => {
+    const updatedProperties = [...properties];
+    updatedProperties.splice(index, 1);
+    setProperties(updatedProperties);
+  };
+
+  const toggleForm = () => {
+    setShowForm(!showForm); // Toggle the visibility of the form
   };
 
   return (
-    <div className="new-property-form">
-      {/* Card Form: Allows users to add properties */}
-      <h2>New Property</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Title:
-          <input
-            type="text"
-            name="title"
-            value={property.title}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Description:
-          <textarea
-            name="description"
-            value={property.description}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Price:
-          <input
-            type="number"
-            name="price"
-            value={property.price}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Location:
-          <input
-            type="text"
-            name="location"
-            value={property.location}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Type:
-          <select name="type" value={property.type} onChange={handleChange} required>
-            <option value="">Select</option>
-            <option value="selling">Selling</option>
-            <option value="renting">Renting</option>
-            <option value="AirBnB">AirBnB</option>
-          </select>
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+    <div>
+      <h1>Property</h1>
+      {showForm && (
+        <div>
+          <h2>Add Property</h2>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              addProperty({
+                title: e.target.title.value,
+                description: e.target.description.value,
+                price: e.target.price.value,
+                location: e.target.location.value,
+                type: e.target.type.value,
+                image: e.target.image.value,
+                reviews: e.target.reviews.value,
+                bedrooms: e.target.bedrooms.value,
+                space: e.target.space.value,
+                yearBuilt: e.target.yearBuilt.value,
+                contactAgent: e.target.contactAgent.value,
+              });
+            }}
+          >
+            <label>
+              Title:
+              <input type="text" name="title" required />
+            </label>
+            <label>
+              Description:
+              <textarea name="description" required />
+            </label>
+            <label>
+              Price:
+              <input type="number" name="price" required />
+            </label>
+            <label>
+              Location:
+              <input type="text" name="location" required />
+            </label>
+            <label>
+              Type:
+              <select name="type" required>
+                <option value="">Select</option>
+                <option value="selling">Selling</option>
+                <option value="renting">Renting</option>
+                <option value="AirBnB">AirBnB</option>
+              </select>
+            </label>
+            <label>
+              Image Address:
+              <input type="text" name="image" />
+            </label>
+            <label>
+              Reviews:
+              <input type="number" name="reviews" />
+            </label>
+            <label>
+              Bedrooms:
+              <input type="number" name="bedrooms" />
+            </label>
+            <label>
+              Space (sqft):
+              <input type="number" name="space" />
+            </label>
+            <label>
+              Year Built:
+              <input type="number" name="yearBuilt" />
+            </label>
+            <label>
+              Contact Agent:
+              <input type="text" name="contactAgent" />
+            </label>
+            <button type="submit">Add Property</button>
+          </form>
+        </div>
+      )}
+      <div>
+        <button onClick={toggleForm}>Add Property</button>
+      </div>
+      <div>
+        <h2>Properties</h2>
+        <ul>
+          {properties.map((property, index) => (
+            <div key={index}>
+              <PropertyCard {...property} />
+              <button onClick={() => deleteProperty(index)}>Delete</button>
+            </div>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
 
-export default CardForm;
+export default PropertyCardForm;
