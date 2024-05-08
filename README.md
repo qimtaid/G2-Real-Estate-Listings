@@ -51,7 +51,7 @@ G2 Real Estate Listings is a dynamic React.js application designed for individua
 
 4. To view the mock database:
    ```bash
-   npm run json-server
+   json-server --watch db.json
    ```
 
 ### Live Link
