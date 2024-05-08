@@ -22,7 +22,7 @@ function PropertyCardForm() {
 
   return (
     <div>
-      <h1>Property</h1>
+      <h1>Property Form</h1>
       {showForm && (
         <div>
           <h2>Add Property</h2>
