@@ -71,6 +71,12 @@ p, h1, h2, h4 {
   padding: 20px;
   margin: 10px;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.minor-details {
+  margin-bottom: 10px;
 }
 
 .card img {
@@ -191,6 +197,36 @@ select {
   margin: 20px auto; 
   max-width: 600px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-buttons button {
+  margin-right: 10px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust the space between buttons */
+  margin-top: 10px;
+}
+
+.button-container button {
+  background-color: #124E66;
+  color: #D3D9D4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.button-container button:hover {
+  background-color: #074D92;
 }
 
 @media (max-width: 600px) {

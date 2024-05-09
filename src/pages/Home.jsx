@@ -16,7 +16,7 @@ function Home() {
             <NavBar />
             
             <main>
-                <h1>Welcome to G2 Real Estate Listings</h1>
+                <h1>Welcome to G2 Real Estate Listings App</h1>
                 <h2>What were you looking to do?</h2>
                 <select onChange={handleSelectionChange} value={selection}>
                     <option value={selection}>All</option>
