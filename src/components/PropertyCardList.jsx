@@ -22,6 +22,7 @@ function PropertyCardList({selection}) {
                 <PropertyCard key={property.id} property={property} />
             ))}
         </ul>
+        
     );
 }
 
