@@ -68,7 +68,7 @@ src/
    ```
 
 ### Live Link
-Access the web application directly via [this link](https://your-g2-real-estate-live-link.com/).
+Access the web application directly via [this link](https://g2-real-estate-listings-e3tn.vercel.app/).
 
 ### Technologies Used
 - HTML
