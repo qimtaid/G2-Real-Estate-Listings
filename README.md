@@ -6,6 +6,23 @@
 ### Project Description
 G2 Real Estate Listings is a dynamic React.js application designed for individuals interested in the real estate market. Whether you're looking to buy, sell, rent, or list properties on Airbnb, this application provides a comprehensive platform to view and manage real estate listings. The application features an intuitive user interface with various functionalities such as property filtering, searching, and detailed displays, all powered by Vite with HMR for an improved development experience.
 
+### Setup
+Our src folder contains the following JavaScript files:
+src/
+├── components/
+    ├── PropertyCard.jsx
+    ├── NavBar.jsx
+    ├── NavBar.css
+└── pages/
+    ├── Rent.jsx
+    ├── Buy.jsx
+    ├── Sell.jsx
+    ├── Home.jsx
+    ├── About.js
+├── index.css
+├── index.js
+├── routes.js
+
 ### Features
 
 - **NavBar**: Handles routing throughout the application.
