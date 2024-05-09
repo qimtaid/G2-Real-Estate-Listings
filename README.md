@@ -14,8 +14,7 @@ src/
     ├── NavBar.jsx
     ├── NavBar.css
 └── pages/
-    ├── Rent.jsx
-    ├── Buy.jsx
+    ├── ErrorPage.jsx
     ├── Sell.jsx
     ├── Home.jsx
     ├── About.jsx
@@ -31,10 +30,7 @@ src/
 - **Card Form**: Enables users to add properties (for selling, renting, or AirBnB).
 - **Card Container**: Manages and displays multiple property cards.
 - **About**: Provides application details and contact information.
-- **Popular/Wish List**: Showcases properties that are highly liked or wished by users.
-- **Sell/Buy/Rent/BnB Pages**: Dedicated pages for different transaction types.
-- **Filter/Sort**: Allows users to filter and sort properties based on price, location, and type.
-- **SearchBar**: Enables searching for properties directly.
+- **Filter/Sort**: Allows users to filter and sort properties based on  type.(buy/rent/bnb)
 - **db.json**: Serves as a mock database for properties using JSON-server.
 - **CSS**: Ensures the application is visually appealing and functionally responsive.
 
