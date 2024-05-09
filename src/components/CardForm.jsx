@@ -14,7 +14,7 @@ function PropertyCardForm() {
         bedrooms: '',
         space: '',
         yearBuilt: '',
-        contactAgent: ''
+        agent: ''
     });
 
     const handleChange = (event) => {
@@ -40,7 +40,7 @@ function PropertyCardForm() {
             .then(newProperty => {
                 setProperties([...properties, newProperty]);
                 setFormData({
-                    title: '',
+                    name: '',
                     description: '',
                     price: '',
                     location: '',
@@ -50,7 +50,7 @@ function PropertyCardForm() {
                     bedrooms: '',
                     space: '',
                     yearBuilt: '',
-                    contactAgent: ''
+                    agent: ''
                 });
             })
             .catch(error => {
