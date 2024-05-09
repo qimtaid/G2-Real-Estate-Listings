@@ -1,118 +1,109 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import PropertyCard from './PropertyCard';
 
 function PropertyCardForm() {
-  const [properties, setProperties] = useState([]);
-  const [showForm, setShowForm] = useState(false);
+    const [properties, setProperties] = useState([]);
+    const [editingIndex, setEditingIndex] = useState(-1);  // Index of the property being edited
+    const [formData, setFormData] = useState({
+        title: '',
+        description: '',
+        price: '',
+        location: '',
+        type: '', // This will be handled by a select dropdown
+        image: '',
+        reviews: '',
+        bedrooms: '',
+        space: '',
+        yearBuilt: '',
+        contactAgent: ''
+    });
 
-  const addProperty = (newProperty) => {
-    setProperties([...properties, newProperty]);
-    setShowForm(false); // Hide the form after adding the property
-  };
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
-  const deleteProperty = (index) => {
-    const updatedProperties = [...properties];
-    updatedProperties.splice(index, 1);
-    setProperties(updatedProperties);
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (editingIndex >= 0) {
+            // Update existing property
+            const updatedProperties = [...properties];
+            updatedProperties[editingIndex] = formData;
+            setProperties(updatedProperties);
+            setEditingIndex(-1);  // Reset editing index
+        } else {
+            // Add new property
+            setProperties([...properties, formData]);
+        }
+        setFormData({  // Clear form
+            title: '',
+            description: '',
+            price: '',
+            location: '',
+            type: '',
+            image: '',
+            reviews: '',
+            bedrooms: '',
+            space: '',
+            yearBuilt: '',
+            contactAgent: ''
+        });
+    };
 
-  const toggleForm = () => {
-    setShowForm(!showForm); // Toggle the visibility of the form
-  };
+    const handleEdit = (index) => {
+        setEditingIndex(index);
+        setFormData(properties[index]);
+    };
 
-  return (
-    <div>
-      <h1>Property Form</h1>
-      {showForm && (
-        <div>
-          <h2>Add Property</h2>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              addProperty({
-                title: e.target.title.value,
-                description: e.target.description.value,
-                price: e.target.price.value,
-                location: e.target.location.value,
-                type: e.target.type.value,
-                image: e.target.image.value,
-                reviews: e.target.reviews.value,
-                bedrooms: e.target.bedrooms.value,
-                space: e.target.space.value,
-                yearBuilt: e.target.yearBuilt.value,
-                contactAgent: e.target.contactAgent.value,
-              });
-            }}
-          >
-            <label>
-              Title:
-              <input type="text" name="title" required />
-            </label>
-            <label>
-              Description:
-              <textarea name="description" required />
-            </label>
-            <label>
-              Price:
-              <input type="number" name="price" required />
-            </label>
-            <label>
-              Location:
-              <input type="text" name="location" required />
-            </label>
-            <label>
-              Type:
-              <select name="type" required>
-                <option value="">Select</option>
-                <option value="selling">Selling</option>
-                <option value="renting">Renting</option>
-                <option value="AirBnB">AirBnB</option>
-              </select>
-            </label>
-            <label>
-              Image Address:
-              <input type="text" name="image" />
-            </label>
-            <label>
-              Reviews:
-              <input type="number" name="reviews" />
-            </label>
-            <label>
-              Bedrooms:
-              <input type="number" name="bedrooms" />
-            </label>
-            <label>
-              Space (sqft):
-              <input type="number" name="space" />
-            </label>
-            <label>
-              Year Built:
-              <input type="number" name="yearBuilt" />
-            </label>
-            <label>
-              Contact Agent:
-              <input type="text" name="contactAgent" />
-            </label>
-            <button type="submit">Add Property</button>
-          </form>
-        </div>
-      )}
-      <div>
-        <button onClick={toggleForm}>Add Property</button>
-      </div>
-      <div>
-        <h2>Properties</h2>
-        <ul>
-          {properties.map((property, index) => (
-            <div key={index}>
-              <PropertyCard {...property} />
-              <button onClick={() => deleteProperty(index)}>Delete</button>
+    const handleDelete = (index) => {
+        const updatedProperties = [...properties];
+        updatedProperties.splice(index, 1);
+        setProperties(updatedProperties);
+    };
+
+    return (
+        <div className='container' id='form-container'>
+            <h1>Property Form</h1>
+            <div className='content' id='form-content'>
+                <h2>{editingIndex >= 0 ? 'Edit Property' : 'Add Property'}</h2>
+                <form onSubmit={handleSubmit}>
+                    {Object.keys(formData).map((key) => (
+                        <div className="form-field" key={key}>
+                            <label htmlFor={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</label>
+                            {key === 'type' ? (
+                                <select id={key} name={key} value={formData[key]} onChange={handleChange} required>
+                                    <option value="">Select Type</option>
+                                    <option value="Rent">Rent</option>
+                                    <option value="Sale">Sell</option>
+                                    <option value="AirBnB">AirBnB</option>
+                                </select>
+                            ) : (
+                                <input
+                                    type={key === 'price' || key === 'bedrooms' || key === 'space' || key === 'yearBuilt' ? 'number' : 'text'}
+                                    id={key}
+                                    name={key}
+                                    value={formData[key]}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            )}
+                        </div>
+                    ))}
+                    <button type="submit">{editingIndex >= 0 ? 'Update Property' : 'Add Property'}</button>
+                </form>
             </div>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
+            <h2>Properties</h2>
+            <ul>
+                {properties.map((property, index) => (
+                    <li key={property.id}>
+                        <PropertyCard property={property} />
+                        <button onClick={() => handleEdit(index)}>Edit</button>
+                        <button onClick={() => handleDelete(index)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }
 
 export default PropertyCardForm;
