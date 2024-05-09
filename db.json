@@ -280,13 +280,6 @@
         "type": "AirBnB",
         "agent": "Liam Martinez"
       }
-    ],
-    "formData": {
-        "title": "",
-        "description": "",
-        "price": "",
-        "location": "",
-        "type": ""
-      }
+    ]
   }
   

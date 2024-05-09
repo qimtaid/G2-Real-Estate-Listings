@@ -9,7 +9,7 @@ function PropertyCardForm() {
         description: '',
         price: '',
         location: '',
-        type: '', // This will be handled by a select dropdown
+        type: '', 
         image: '',
         reviews: '',
         bedrooms: '',
@@ -35,19 +35,6 @@ function PropertyCardForm() {
             // Add new property
             setProperties([...properties, formData]);
         }
-        setFormData({  // Clear form
-            title: '',
-            description: '',
-            price: '',
-            location: '',
-            type: '',
-            image: '',
-            reviews: '',
-            bedrooms: '',
-            space: '',
-            yearBuilt: '',
-            contactAgent: ''
-        });
     };
 
     const handleEdit = (index) => {
@@ -71,7 +58,11 @@ function PropertyCardForm() {
                         <div className="form-field" key={key}>
                             <label htmlFor={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</label>
                             {key === 'type' ? (
-                                <select id={key} name={key} value={formData[key]} onChange={handleChange} required>
+                                <select 
+                                id={key} 
+                                name={key} 
+                                value={formData[key]} 
+                                onChange={handleChange} required>
                                     <option value="">Select Type</option>
                                     <option value="Rent">Rent</option>
                                     <option value="Sale">Sell</option>
