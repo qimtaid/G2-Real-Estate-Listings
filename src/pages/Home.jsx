@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import PropertyCardList from '../components/PropertyCardList';
 
 function Home() {
-    const [selection, setSelection] = useState();
+    const [selection, setSelection] = useState("Rent");
 
     
     const handleSelectionChange = (event) => {

@@ -18,10 +18,10 @@ src/
     ├── Buy.jsx
     ├── Sell.jsx
     ├── Home.jsx
-    ├── About.js
+    ├── About.jsx
 ├── index.css
-├── index.js
-├── routes.js
+├── main.jsx
+├── routes.jsx
 
 ### Features
 
