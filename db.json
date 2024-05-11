@@ -1,7 +1,7 @@
 {
   "properties": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Cozy Apartment in Downtown",
       "image": "src/assets/images/Cozy Apartment in Downtown.png",
       "price": 12000,
@@ -15,7 +15,7 @@
       "agent": "John Doe"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Luxurious Villa with a View",
       "image": "src/assets/images/Luxurious Villa with a View.png",
       "price": 5000000,
@@ -29,7 +29,7 @@
       "agent": "Jane Smith"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Charming Cottage for a Relaxing Getaway",
       "image": "src/assets/images/Charming Cottage for a Relaxing Getaway.png",
       "price": 1500,
@@ -43,7 +43,7 @@
       "agent": "Alice Johnson"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Modern Loft in the City",
       "image": "src/assets/images/Modern Loft in the City.png",
       "price": 18000,
@@ -57,7 +57,7 @@
       "agent": "Michael Brown"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Seaside Cottage with Ocean Views",
       "image": "src/assets/images/Seaside Cottage with Ocean Views.png",
       "price": 3000,
@@ -71,7 +71,7 @@
       "agent": "Emily Clark"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Elegant Townhouse in Historic District",
       "image": "src/assets/images/Elegant Townhouse in Historic District.png",
       "price": 4500000,
@@ -85,7 +85,7 @@
       "agent": "David Wilson"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Modern City Apartment with Balcony",
       "image": "src/assets/images/Modern City Apartment with Balcony.png",
       "price": 150000,
@@ -99,7 +99,7 @@
       "agent": "Sarah Johnson"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Rustic Cabin Retreat",
       "image": "src/assets/images/Rustic Cabin Retreat.png",
       "price": 2500,
@@ -113,7 +113,7 @@
       "agent": "Matthew White"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Spacious Family Home",
       "image": "src/assets/images/Spacious Family Home.png",
       "price": 3500000,
@@ -127,7 +127,7 @@
       "agent": "Laura Martinez"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Urban Studio Apartment",
       "image": "src/assets/images/Urban Studio Apartment.png",
       "price": 90000,
@@ -141,7 +141,7 @@
       "agent": "Daniel Harris"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Mountain Chalet with Scenic Views",
       "image": "src/assets/images/Mountain Chalet with Scenic Views.png",
       "price": 4000,
@@ -155,7 +155,7 @@
       "agent": "Olivia Garcia"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Coastal Retreat with Beach Access",
       "image": "src/assets/images/Coastal Retreat with Beach Access.png",
       "price": 5500,
@@ -169,7 +169,7 @@
       "agent": "Andrew Rodriguez"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Historic Mansion",
       "image": "src/assets/images/Historic Mansion.png",
       "price": 8000000,
@@ -183,7 +183,7 @@
       "agent": "Sophia Martinez"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Modern City Loft",
       "image": "src/assets/images/Modern City Loft.png",
       "price": 22000,
@@ -197,7 +197,7 @@
       "agent": "Ethan Wilson"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Riverside Retreat",
       "image": "src/assets/images/Riverside Retreat.png",
       "price": 30000,
@@ -211,7 +211,7 @@
       "agent": "Mia Clark"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Elegant Beach House",
       "image": "src/assets/images/Elegant Beach House.png",
       "price": 7000000,
@@ -225,7 +225,7 @@
       "agent": "William Brown"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Mountain Retreat with Hot Tub",
       "image": "src/assets/images/Mountain Retreat with Hot Tub.png",
       "price": 35000,
@@ -239,7 +239,7 @@
       "agent": "Ava Garcia"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Scenic Lakefront Cabin",
       "image": "src/assets/images/Scenic Lakefront Cabin.png",
       "price": 40000,
@@ -253,7 +253,7 @@
       "agent": "Noah Johnson"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Historic Townhouse",
       "image": "src/assets/images/Historic Townhouse.png",
       "price": 6500000,
@@ -267,7 +267,7 @@
       "agent": "Emma Rodriguez"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Ski Chalet with Fireplace",
       "image": "src/assets/images/Ski Chalet with Fireplace.png",
       "price": 50000,
@@ -293,6 +293,20 @@
       "space": "600",
       "yearBuilt": "2022",
       "agent": "Ian Chege"
+    },
+    {
+      "id": "1e29",
+      "title": "Varaible Vikings Mansion",
+      "description": "A 3 bedroom house located in Kigali, with a spacious compound.",
+      "price": "600",
+      "location": "Kigali",
+      "type": "Rent",
+      "image": "https://imgs.search.brave.com/bMdX5rMz_yHkIobQ8LvYZKVEFbKPYeK9rayB52uJqoY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/aHduc3RhdGljLmNv/bS81MDAvMzUwLzgw/L2ZhbHNlL2hTNnhN/NjZWVzdhUFBrTkhD/V1BpLlBGRlB3cWZu/QlVkOkk3cFRYdUVr/TGV0QXNvRmtCelZu/OHlsTnkwNWNkMXJG/MXJiR0cya2NlQ21l/R2dsY05xTzJ0d1RM/NExMMk5nZTZnT1JS/WnR0T1FkRXc0TkZK/MlpEUEY5MGMzNlBS/Z1VMS0QzOnQuU3dv/R2ZmWEV5MUdXOWhj/NnZkNEZUUmZtMGNS/UVk2bGFmVXlZUFh2/T2w4SkU5UE1JWE9n/dk44bVFfXw",
+      "reviews": "4.5",
+      "bedrooms": "3",
+      "space": "1200",
+      "yearBuilt": "2023",
+      "agent": "Dan Koskei"
     }
   ]
 }
